@@ -1,29 +1,29 @@
-class Storage {
-  #items
-  constructor(items) {
-    this.#items = items;
-  }
-// Клас Storage представляє сховище для зберігання елементів. В конструкторі класу передається масив items, який буде зберігатися в об'єкті.
-  getItems() {
-    return this.#items;
-  }
-// Метод getItems() повертає масив items.
-  addItem(newItem) {
-    this.#items.push(newItem);
-  }
-// Метод addItem(newItem) додає новий елемент в масив items.
-  removeItem(itemToRemove) {
-    this.#items = this.#items.filter(item => item !== itemToRemove);
-}
-  // Метод removeItem(itemToRemove) видаляє елемент з масиву items, якщо він дорівнює itemToRemove.
-}
-
-const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
-storage.addItem("Droid");
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
-storage.removeItem("Prolonger");
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
-// У 1 прикладі ми створюємо об'єкт storage класу Storage з масивом ["Nanitoids", "Prolonger", "Antigravitator"]. 
-// У 2 прикладі додаємо елемент "Droid" до масиву items методом addItem().
-// Після цього ми видаляємо елемент "Prolonger" з масиву items методом removeItem().В кінцевому результаті ми отримаємо масив["Nanitoids", "Antigravitator", "Droid"].
+const images = [
+  {
+    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'White and Black Long Fur Cat',
+  },
+  {
+    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+  },
+  {
+    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Group of Horses Running',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    alt: 'Elephant Beside on Baby Elephant',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    alt: 'Blue Geeen and Orange Parrot',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    alt: 'Zebras on Zebra',
+  },
+];
