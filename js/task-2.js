@@ -27,3 +27,22 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+const galleryList = document.querySelector(".gallery");
+
+const galleryItems = images.map(image => {
+  const listItem = document.createElement("li");
+  const imgElement = document.createElement("img");
+
+  imgElement.src = image.url;
+  imgElement.alt = image.alt;
+
+  listItem.appendChild(imgElement);
+
+  return listItem;
+});
+
+galleryList.append(...galleryItems);
+// The code creates <img> elements based on data from the images array and nests them in <li> elements. All <li> elements are then added to the DOM in one add operation.
+
+// The .gallery class is added to the HTML so that the script can find the list to add the gallery to.
